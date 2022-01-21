@@ -1,0 +1,27 @@
+<p>Por Pais!</p>
+<hr>
+<div class="row">
+    <div class="col">
+       <app-pais-input 
+       placeholder = "Buscar país"
+       (onEnter)="buscar( $event )" 
+       (onDebounce)="sugerencias($event)"> <!--() escuchamos la emisión del hijo al padre -->
+           
+       </app-pais-input>
+    </div>
+</div>
+
+<hr>
+<div *ngIf="hayError" 
+     class="alert alert-danger">
+    No se encontró nada con el término {{ termino }}
+</div>
+
+<div *ngIf="paises.length > 0" class="row">
+    <div class="col">
+
+        <app-pais-tabla [paises]="paises"></app-pais-tabla>
+
+
+    </div>
+</div>

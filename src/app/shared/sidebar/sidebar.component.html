@@ -1,0 +1,13 @@
+<h2>Busquedas</h2>
+        <hr>
+        <ul class="list-group">
+            <!--routerLinkActiveOptions liga lo de routing module.pathMatch:'full'-->
+            <li routerLink=""  
+                routerLinkActive="active" 
+                [routerLinkActiveOptions]="{ exact: true}" 
+                class="list-group-item">
+                Buscar país
+            </li> <!--routerLinkActive la clase que indica que esta activo el boton-->
+            <li routerLink="region"  routerLinkActive="active"  class="list-group-item">Buscar region</li>
+            <li routerLink="capital" routerLinkActive="active"  class="list-group-item">Buscar capital</li>
+        </ul>
